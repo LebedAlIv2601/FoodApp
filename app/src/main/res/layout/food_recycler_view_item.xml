@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="productModel"
+            type="com.example.foodapp.domain.model.ProductDomainModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/food_recycler_view_padding">
+
+        <ImageView
+            android:id="@+id/food_image_view"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:src="@drawable/food_placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/food_name"
+            style="@style/food_recycler_view_header_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/food_recycler_view_text_margin_left"
+            android:text="@{productModel.title}"
+            app:layout_constraintStart_toEndOf="@+id/food_image_view"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/food_description"
+            style="@style/food_recycler_view_description_text_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/food_recycler_view_text_margin_left"
+            android:layout_marginTop="@dimen/food_recycler_view_text_margin_top"
+            android:text="@{productModel.restaurant}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/food_image_view"
+            app:layout_constraintTop_toBottomOf="@+id/food_name" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

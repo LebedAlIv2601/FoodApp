@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FoodApp</string>
+
+    <string name="menu_string">Меню</string>
+    <string name="profile_string">Профиль</string>
+    <string name="cart_string">Корзина</string>
+    <string name="qr_string">QR-code</string>
+
+    <string-array name="category_array">
+        <item>Пицца</item>
+        <item>Напитки</item>
+        <item>Десерты</item>
+        <item>Закуски</item>
+    </string-array>
+</resources>
